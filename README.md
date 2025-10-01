@@ -46,7 +46,7 @@ TO-DO-APP/
 2. Navigate into the project folder
 
    ```bash
-   cd to-do-app
+   cd to_do_app
    ```
 
 3. Install dependencies
