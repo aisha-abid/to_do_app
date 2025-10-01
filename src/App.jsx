@@ -60,21 +60,24 @@ const App = () => {
         >Add</button>
         </div>
 
-         <ul className='px-7 space-y-3'>
+         <ul className='px-3 space-y-2'>
         {tasks.map((task,index)=>(
 
       
-          <li className='flex items-center justify-between px-3 py-0.5 'key={index}>
+          <li 
+          className='flex items-center justify-between px-1 w-full'
+          key={index}>
+            <div className='flex'>
              <div className="flex items-center space-x-3">
             <img className='w-5 h-5 mr-2' 
             onClick={()=>{handleToggle(index)}}
              src={task.completed?tick:circle} alt="" />
-            <span className={` ${task.completed ? "line-through text-gray-500" : "text-gray-900"}`}
+            <span className={`truncate max-w-[550px] ${task.completed ? "line-through text-gray-500" : "text-gray-900"}`}
             >{task.text}</span>
-            
+            </div>
             </div>
           <span 
-          className='flex items-center justify-center font-bold  rounded-full h-7 w-7 hover:bg-red-500 hover:text-amber-50 transition ml-50'
+          className='flex items-center justify-center font-bold  rounded-full h-7 w-7 hover:bg-red-500 hover:text-amber-50 transition'
           onClick={() =>{handleRemove(index)}}
           >×</span></li>
         )
